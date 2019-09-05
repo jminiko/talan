@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+<p th:text="'Repository: ' + ${repository} + ${param.greet} + '!'" />
+<table>
+<tr th:each="customer : ${customers}">
+    <td th:text="${customer.id}">Id</td>
+    <td><a href="#" th:text="${customer.firstName}">FirstName</a></td>
+    <td th:text="${customer.lastName}">LastName</td>
+</tr>
+</table>
+</body>
+</html>
